@@ -44,6 +44,11 @@ HW_TOOLCHAIN="-t arm-zephyr-eabi"
 # Intended Ubuntu version
 UBUNTU_VERSION=22.04
 
+# Determine the home directory of the original user
+if [ -n "$SUDO_USER" ]; then
+    HOME=$(eval echo "~$SUDO_USER")
+fi
+
 # Zephyr Project location; no changes recommended.
 ZEPHYR_INSTALL_DIR="${HOME}/zephyrproject"
 ZEPHYR_SDK_PATH="${HOME}/zephyr-sdk-${ZEPHYR_SDK_VERSION}"
