@@ -32,7 +32,7 @@ Options for the `HW_TOOLCHAIN` are listed in the script. Use `all` if you don't 
 
 Once you're satisfied with the installation options, execute the following command:
 ```
-sudo ~./zephyr-installer/zephyr_install.sh
+sudo ~/zephyr-installer/zephyr_install.sh
 ```
 If you get an error something to the effect
 ```
