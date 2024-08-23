@@ -36,7 +36,10 @@ HW_ARCH=x86_64
 # xtensa-nxp_rt600_adsp_zephyr-elf
 # xtensa-sample_controller_zephyr-elf
 
-HW_TOOLCHAIN=arm-zephyr-eabi
+# To install multiple tool chains, change HW_TOOLCHAIN to something like:
+# HW_TOOLCHAIN="-t arm-zephyr-eabi -t xtensa-espressif_esp32_zephyr-elf"
+
+HW_TOOLCHAIN="-t arm-zephyr-eabi"
 
 # Intended Ubuntu version
 UBUNTU_VERSION=22.04
@@ -137,8 +140,8 @@ cd zephyr-sdk-${ZEPHYR_SDK_VERSION}
 # Run setup script
 # -h: Install host tools
 # -c: Register Zephyr SDK CMake package
-# -t ${HW_TOOLCHAIN}: Install toolchain
-bash setup.sh -t ${HW_TOOLCHAIN} -h -c
+# ${HW_TOOLCHAIN}: Install toolchain
+bash setup.sh -c ${HW_TOOLCHAIN}
 
 # Install udev rules which allow you to flash most Zephyr boards as a regular user:
 sudo cp ~/zephyr-sdk-${ZEPHYR_SDK_VERSION}/sysroots/${HW_ARCH}-pokysdk-linux/usr/share/openocd/contrib/60-openocd.rules /etc/udev/rules.d
