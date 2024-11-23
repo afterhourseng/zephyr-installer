@@ -10,6 +10,8 @@ As of this version, the scripts are intended for and tested on the following:
 2. 64-bit PC (AMD64) machines.
 3. Tested using [Virtual Box](https://www.virtualbox.org/) running on an Intel NUC with Ubuntu Desktop 22.04 installed.
 
+NOTE: for compatibility of Zephyr and Zephyr SDK versions, see the the most up to date version of the [Zephyr-SDK Version Compatibility Chart](https://docs.google.com/spreadsheets/d/1wzGJLRuR6urTgnDFUqKk7pEB8O6vWu6Sxziw_KROxMA/edit?gid=0#gid=0)
+
 ## Summary
 
 Clone the repository (or copy files) to the machine you intend to install Zephyr.
